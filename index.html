@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="./common.css">
+</head>
+<body>
+  <div class="container">
+    <div class="bg"></div>
+    <div class="contentsBox">
+      <h1 class="mainTitle">ToDo_List</h1>
+      <div style="flex-direction: row; display: flex; width: 100%;">
+        <div class="todoBox">
+          <div class="todo">
+            <input type="text" id="todoInput" placeholder="할일 추가">
+            <button type="button" id="addTodo">
+              <span></span>
+              <span></span>
+            </button>
+            
+          </div>
+          <ul id="todoList">
+          </ul>
+          <div class="deleteBox">
+            <button type="button" id="allDel">전체삭제</button>
+          </div>
+        </div>
+        <div class="otherBox">
+          <div class="time">
+          </div>
+          <div class="weather">
+            <div class="weatherBox">
+              <div class="weatherLocation"></div>
+              <div class="weatherInfoBox">
+                <img class="weatherIcon" src="" alt="">
+                <div class="weatherInfo"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./index.js"></script>
+  <script>
+    saveTodoData()
+  </script>
+</body>
+</html>
+
+
