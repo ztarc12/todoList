@@ -36,7 +36,7 @@ body {
 }
 .contentsBox {
   z-index: 2;
-  width: 70%;
+  /* width: 50%; */
   padding: 2rem;
   background-color: rgba(255,255,255,1);
   box-shadow: 0px 0px 15px #000;
@@ -46,7 +46,9 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  width: calc(100% - 250px);
+  /* width: calc(100% - 250px); */
+  width: 50%;
+  margin: 1rem;
 }
 .todo,
 #todoList {
@@ -149,6 +151,9 @@ body {
   color: white;
   background-color: crimson;
 }
+.otherBox {
+  margin: 1rem;
+}
 .otherBox>div {
   box-shadow: 0px 0px 5px #666;
 }
@@ -192,4 +197,38 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 567px) {
+  .contentsBox>div {
+    flex-direction: column !important;
+  }
+  .todoBox {
+    order: 2;
+    width: 100%;
+    margin: 0;
+  }
+  .otherBox {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .otherBox>div {
+    width: 100%;
+  }
+  .time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .weatherInfoBox>img {
+    width: 60px;
+  }
+}
+@media (max-height: 758px) {
+  #todoList {
+    min-height: 200px;
+  }
 }
